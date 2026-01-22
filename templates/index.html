@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCR Text Extractor</title>
+</head>
+<body>
+    <h2>OCR Text Extractor (Proof of Concept)</h2>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <br><br>
+        <button type="submit">Extract Text</button>
+    </form>
+
+    {% if extracted_text %}
+        <h3>Extracted Text:</h3>
+        <pre>{{ extracted_text }}</pre>
+    {% endif %}
+</body>
+</html>
